@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  background: blanchedalmond;
+}
+
+* {
+    font-family: "Poppins", sans-serif; 
+    padding: 0; 
+    margin: 0; 
+}
+
+h1, h2 {
+    text-align: center;
+    width: 100%; 
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+p {
+    margin: 20px; 
+    text-align: center;
+}
+
+section {
+    padding: 0; 
+    min-height: 120vh; 
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+section:nth-child(odd) {
+    background-color: blanchedalmond;
+    color:black; 
+}
+
+section:nth-child(even){
+    background-color: #1d212b;
+    color: blanchedalmond;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    top: 20vh;
+}
+
+.links {
+    display: flex; 
+}
+
+.link-item{
+    margin: 5px auto; 
+    display: inline-block;
+    width: 22%;
+    transition: transform .2s;
+}
+
+.link-item:hover {
+    transform: scale(1.1); 
+}
+
+.link-img {
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.prof-container {
+    text-align: center;
+    width: 100%;
+}
+
+.rtx-img {
+    border: 2px solid black;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease; 
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1; 
+}
+
+.skills-container {
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex; 
+}
+
+.lang-img {
+    display: inline-block;
+    margin: auto; 
+    min-width: 100px;
+    height: 100px;
+}
+
+.img-container {
+    text-align: center;
+    width: 100%;
+}
+
+.dashboard-img {
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 75%;
+    max-height: 45%;
+}
+
+#projects {
+    top: 0vh;
+}
+
+.link-header{
+    
+}
