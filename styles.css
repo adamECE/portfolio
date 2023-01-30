@@ -18,6 +18,7 @@ h1, h2 {
 h1 {
     font-size: 40px;
     margin-bottom: 40px;
+    padding-top: 60px; 
 }
 
 h2 {
@@ -56,6 +57,19 @@ a {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.align-lists {
+    display: inline-flex;
+    width: 90%;
+    margin: 20px; 
+    align-items: center;
+} 
+
+ul {
+    margin: auto; 
+    width: 30%;
+    align-items: center;
 }
 
 .container {
@@ -144,3 +158,90 @@ a {
 #projects {
     top: 0vh;
 }
+
+
+/*
+    SLIDESHOW STYLES
+*/
+
+/*Hide the images by default*/
+.slide {
+    display: none;
+}
+
+/* Hover on slideshow dots */
+.dot:hover {
+    background-color: #717171;
+    /*background-color: red;*/
+}
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin:auto;
+  }
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+  }
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+.src-code-btn {
+    color: white; 
+    padding: 6px; 
+    background-color: #1d212b;
+    border-radius: 6px;
+    width: auto;
+    top: 1; 
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover, .src-code-btn:hover {
+    background-color: rgba(0,0,0,0.8); 
+}
+
+/* Dots/bullets/indicators on slideshow*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+.slideshow-img {
+    width: 60%; 
+    border: 8px solid black; 
+    border-radius: 8px;
+} 
