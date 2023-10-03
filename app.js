@@ -18,7 +18,7 @@ function reveal() {
 }
 
 /*
-    SLIDESHOW FUNCTIONALITY
+    SLIDESHOW FUNCTIONALITY 
 */
 
 let slideIndex = 1;
@@ -51,23 +51,36 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-let slideIndexA = 0;
-showSlidesAuto();
+////////////////////////////////////////////////
+// Figure out how to fix this later 
+////////////////////////////////////////////////
 
-// automates slideshow elements 
-function showSlidesAuto() {
-  let iA;
-  let slidesA = document.getElementsByClassName("slide");
-  let dotsA = document.getElementsByClassName("dot");
-  for (iA = 0; iA < slidesA.length; iA++) {
-    slidesA[iA].style.display = "none";  
+let newSlideIndex = 1;
+showSlidesNew(newSlideIndex);
+
+// Next/previous controls
+function plusSlidesNew(n) {
+  showSlidesNew(newSlideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlideNew(n) {
+  showSlidesNew(newSlideIndex = n);
+}
+
+// cycles through slides 
+function showSlidesNew(n) {
+  let i;
+  let slides = document.getElementsByClassName("slideNew");
+  let dots = document.getElementsByClassName("dotNew");
+  if (n > slides.length) {newSlideIndex = 1}
+  if (n < 1) {newSlideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  slideIndexA++;
-  if (slideIndexA > slidesA.length) {slideIndexA = 1}    
-  for (iA = 0; iA < dotsA.length; iA++) {
-    dotsA[iA].className = dotsA[iA].className.replace(" active", "");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slidesA[slideIndexA-1].style.display = "block";  
-  dotsA[slideIndexA-1].className += " active";
-  setTimeout(showSlidesAuto, 3000); // Change image every 2 seconds
+  slides[newSlideIndex-1].style.display = "block";
+  dots[newSlideIndex-1].className += " active";
 }
